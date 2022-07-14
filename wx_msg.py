@@ -36,7 +36,7 @@ def sendEmail(title, content):
         print('traceback.format_exc():\n%s' % traceback.format_exc())
 
 def wxgroup(msg, users="lisensen"):
-    url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=a47bc760-e0f7-44ad-9f61-cb91a25fc6de"
+    url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=a47bc760-e0f7-44ad-9f61-cb91a25fc6df"
     headers = {'Content-Type': 'application/json'}
     text = dict({"content": msg, "mentioned_list": [users]})
     message = {"msgtype": "text", "text": text}
