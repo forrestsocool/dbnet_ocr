@@ -9,11 +9,11 @@ from email.header import Header
 
 # 第三方 SMTP 服务
 mail_host = "smtp.yeah.net"                  # SMTP服务器
-mail_user = "workrobot@yeah.net"             # 用户名
-mail_pass = "QUSONZJDVULUWADO"               # 授权密码，非登录密码
+mail_user = "XXXXXXXXXXXXXX@yeah.net"             # 用户名
+mail_pass = "XXXXXXXXXXXXXXXXX"               # 授权密码，非登录密码
 
-sender = 'workrobot@yeah.net'    # 发件人邮箱(最好写全, 不然会失败)
-receivers = ['15979627228@139.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+sender = 'XXXXXXXXXXXt@yeah.net'    # 发件人邮箱(最好写全, 不然会失败)
+receivers = ['XXXXXXXXXXXXXXXX@139.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
 
 def sendEmail(title, content):
     message = MIMEText(content, 'plain', 'utf-8')  # 内容, 格式, 编码
@@ -36,7 +36,7 @@ def sendEmail(title, content):
         print('traceback.format_exc():\n%s' % traceback.format_exc())
 
 def wxgroup(msg, users="lisensen"):
-    url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=a47bc760-e0f7-44ad-9f61-cb91a25fc6df"
+    url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     headers = {'Content-Type': 'application/json'}
     text = dict({"content": msg, "mentioned_list": [users]})
     message = {"msgtype": "text", "text": text}
@@ -44,9 +44,9 @@ def wxgroup(msg, users="lisensen"):
     print(response.text)
 
 def printMsg(msg):
-    wxgroup(msg, "lisensen")
+    wxgroup(msg, "XXXXXXXXXX")
     print(msg)
 
 if __name__ == "__main__":
     msg = sys.argv[1]
-    wxgroup(msg,"lisensen")
+    wxgroup(msg,"XXXXXXXXXXXX")
